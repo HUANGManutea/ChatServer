@@ -11,7 +11,6 @@ import java.util.HashSet;
 public class ChatServer {
     static int port = 8888;  // port par défaut
     public ServerSocket socket;
-    public static boolean stop;
     public static HashSet<PrintWriter> clients;
 
     public ChatServer() throws IOException{
@@ -19,7 +18,6 @@ public class ChatServer {
         // Création de la socket
         socket = new ServerSocket(port);
         clients = new HashSet<PrintWriter>();
-        stop = false;
     }
 
     public static void out(String s){
